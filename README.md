@@ -8,7 +8,7 @@ Inspired by WP Tasks After Install.
 
 ## Usage
 
-Run `CRA Tasks After Init` from the Command Palette (`ctrl + shift + P`). Select `Yes` to delete test files, or `No` to preserve them.
+Run `CRA Tasks After Init` from the Command Palette (`ctrl + shift + P`). At the first prompt select `Yes` to delete test files, or `No` to preserve them. At the second prompt select `Yes` to create a `jsconfig.json` file.
 
 ## Features
 
@@ -26,6 +26,7 @@ Run `CRA Tasks After Init` from the Command Palette (`ctrl + shift + P`). Select
 - Optionally deletes test files
 - Moves and updates `/src/App.*` to `/src/View/App.*`
 - Updates `/public/index.html`, `/src/index.*`
+- Optionally creates `jsconfig.json` to set working root to `src` (Allows absolute paths)
 - Updates package.json to prevent running the extension a second time on the same project
 
 ## Requirements
@@ -41,6 +42,14 @@ None
 ### 1.0.0
 
 Initial release of CRA Tasks After Init
+
+### 1.1.0
+
+Add option to create `jsconfig.json`
+
+### 1.1.1
+
+Update `README.md` and `CHANGELOG.md` because I forgot for `v1.1.0`
 
 ---
 
