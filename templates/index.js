@@ -67,6 +67,14 @@ test('renders learn react link', () => {
   expect(linkElement).toBeInTheDocument();
 });`
 
+const jsconfigJson = `{
+  "compilerOptions": {
+    "baseUrl": "src"
+  },
+  "include": ["src"]
+}
+`
+
 module.exports = {
   publicHtml,
   tsIndex,
@@ -74,5 +82,6 @@ module.exports = {
   tsAppTest,
   jsIndex,
   jsApp,
-  jsAppTest
+  jsAppTest,
+  jsconfigJson
 }

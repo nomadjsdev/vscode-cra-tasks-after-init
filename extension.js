@@ -45,13 +45,28 @@ function activate(context) {
         ]
 
         // Ask user if tests should be deleted
-        const userInput = await vscode.window.showQuickPick(['Yes', 'No'], {
-          placeHolder: 'Delete tests?',
-          canPickMany: false,
-          ignoreFocusOut: true
-        })
+        const shouldDeleteTests = await vscode.window.showQuickPick(
+          ['Yes', 'No'],
+          {
+            placeHolder: 'Delete tests?',
+            canPickMany: false,
+            ignoreFocusOut: true
+          }
+        )
         const deleteTests =
-          userInput === 'Yes' || userInput === undefined ? true : false
+          shouldDeleteTests === 'Yes' || shouldDeleteTests === undefined
+            ? true
+            : false
+
+        // Ask user if jsconfig.json file should be created
+        const shouldCreateJsconfig = await vscode.window.showQuickPick(
+          ['Yes', 'No'],
+          {
+            placeHolder: 'Create jsconfig.json?',
+            canPickMany: false,
+            ignoreFocusOut: true
+          }
+        )
 
         // Delete files
         filesToDelete.forEach(file => {
@@ -105,6 +120,12 @@ function activate(context) {
             )
           } else {
             fs.unlinkSync(path.join(rootPath, '/src/setupTests.js'))
+          }
+          if (shouldCreateJsconfig) {
+            fs.writeFileSync(
+              path.join(rootPath, 'jsconfig.json'),
+              templates.jsconfigJson
+            )
           }
         }
 
