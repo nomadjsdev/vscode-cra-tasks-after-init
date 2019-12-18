@@ -27,6 +27,7 @@ Run `CRA Tasks After Init` from the Command Palette (`ctrl + shift + P`). At the
 - Moves and updates `/src/App.*` to `/src/View/App.*`
 - Updates `/public/index.html`, `/src/index.*`
 - Optionally creates `jsconfig.json` to set working root to `src` (Allows absolute paths)
+- Optionally creates `_redirects` file (Allows routing on Netlify deployments)
 - Updates package.json to prevent running the extension a second time on the same project
 
 ## Requirements
@@ -39,17 +40,10 @@ None
 
 ## Release Notes
 
-### 1.0.0
+## [1.2.0]
 
-Initial release of CRA Tasks After Init
-
-### 1.1.0
-
-Add option to create `jsconfig.json`
-
-### 1.1.1
-
-Update `README.md` and `CHANGELOG.md` because I forgot for `v1.1.0`
+- Add option to create `_redirects` file for routing on Netlify deployments
+- Bugfixes for `jsconfig.json` creation (`v.1.1.0`)
 
 ---
 
