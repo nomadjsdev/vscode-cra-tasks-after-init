@@ -72,8 +72,9 @@ const jsconfigJson = `{
     "baseUrl": "src"
   },
   "include": ["src"]
-}
-`
+}`
+
+const netlifyRedirect = `/*    /index.html   200`
 
 module.exports = {
   publicHtml,
@@ -83,5 +84,6 @@ module.exports = {
   jsIndex,
   jsApp,
   jsAppTest,
-  jsconfigJson
+  jsconfigJson,
+  netlifyRedirect
 }

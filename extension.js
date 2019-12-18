@@ -67,6 +67,25 @@ function activate(context) {
             ignoreFocusOut: true
           }
         )
+        const createJsconfig =
+          shouldCreateJsconfig === 'Yes' || shouldCreateJsconfig === undefined
+            ? true
+            : false
+
+        // Ask if Netlify redirect file should be created
+        const shouldCreateNetlifyRedirects = await vscode.window.showQuickPick(
+          ['Yes', 'No'],
+          {
+            placeHolder: 'Create Netlify redirect file?',
+            canPickMany: false,
+            ignoreFocusOut: true
+          }
+        )
+        const createNetlifyRedirects =
+          shouldCreateNetlifyRedirects === 'Yes' ||
+          shouldCreateNetlifyRedirects === undefined
+            ? true
+            : false
 
         // Delete files
         filesToDelete.forEach(file => {
@@ -121,12 +140,19 @@ function activate(context) {
           } else {
             fs.unlinkSync(path.join(rootPath, '/src/setupTests.js'))
           }
-          if (shouldCreateJsconfig) {
+          if (createJsconfig) {
             fs.writeFileSync(
               path.join(rootPath, 'jsconfig.json'),
               templates.jsconfigJson
             )
           }
+        }
+
+        if (createNetlifyRedirects) {
+          fs.writeFileSync(
+            path.join(rootPath, 'public/_redirects'),
+            templates.netlifyRedirect
+          )
         }
 
         // Write package.json "TasksAfterInitHasRun: true"
