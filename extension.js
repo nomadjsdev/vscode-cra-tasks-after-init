@@ -159,7 +159,7 @@ function activate(context) {
         const newPackageJson = { ...packageJson, TasksAfterInitHasRun: true }
         fs.writeFileSync(
           path.join(rootPath, '/package.json'),
-          JSON.stringify(newPackageJson)
+          JSON.stringify(newPackageJson, null, 1)
         )
 
         vscode.window.showInformationMessage('Done!')
