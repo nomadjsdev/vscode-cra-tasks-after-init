@@ -25,7 +25,7 @@ const tsApp = `import React from 'react';
 
 const App: React.FC = () => {
   return (
-    <>App</>
+    <React.Fragment><h1>App</h1></React.Fragment>
   );
 }
 
@@ -51,7 +51,7 @@ const jsApp = `import React from 'react';
 
 const App = () => {
   return (
-    <>App</>
+    <React.Fragment><h1>App</h1></React.Fragment>
   );
 }
 

@@ -8,10 +8,10 @@ Inspired by WP Tasks After Install.
 
 ## Usage
 
-Run `CRA Tasks After Init` from the Command Palette (`ctrl + shift + P`).
-At the first prompt select `Yes` to delete test files, or `No` to preserve them.
-At the second prompt select `Yes` to create a `jsconfig.json` file.
-At the third prompt select `Yes` to create a `_redirects` file for Netlify deployments.
+- Run `CRA Tasks After Init` from the Command Palette (`ctrl + shift + P`).
+- At the first prompt select `Yes` to delete test files, or `No` to preserve them.
+- At the second prompt select `Yes` to create a `jsconfig.json` file.
+- At the third prompt select `Yes` to create a `_redirects` file for Netlify deployments.
 
 ## Features
 
@@ -43,9 +43,9 @@ None
 
 ## Release Notes
 
-## [1.3.0]
+## [1.3.1]
 
-- JSON.stringify now formats the output package.json
+- Update to App templates
 
 ---
 

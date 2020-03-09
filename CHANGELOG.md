@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.3.1] - 2020-03-09
+
+- Update to App templates
+
 ## [1.3.0] - 2020-01-02
 
 - JSON.stringify now formats the output package.json
