@@ -2,7 +2,7 @@
   "name": "cra-tasks-after-init",
   "displayName": "CRA Tasks After Init",
   "description": "An extension for VSCode to handle common clean up tasks for Create-React-App",
-  "version": "1.3.0",
+  "version": "1.3.1",
   "icon": "images/broom.png",
   "publisher": "nomadjsdev",
   "homepage": "https://github.com/nomadjsdev/CRATasksAfterInit-vsCodeExtension",
